@@ -1528,8 +1528,9 @@ console.log(img.src);
             } else {
                 DFCOE.innerHTML = this.translate("Distance from Earth's core = ") + (Math.round(this.info[0].dfcoe) + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,') + " km";
             }
-            wrapper.appendChild(DFCOE);
-
+            if (this.config.showDistance == "yes") {
+                wrapper.appendChild(DFCOE);
+            }
 
             // distance from the sun
             var DFS = document.createElement("div");
