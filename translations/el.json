@@ -5,7 +5,15 @@
 "The next new moon is ": "Επόμενο νέο φεγγάρι στις ",
 "The current moon is ": "Το φεγγάρι τώρα είναι ",
 "The moon is ": "Το φεγγάρι είναι ",
-" illuminated": " φωτισμένο",
+" illuminated": "% φωτισμένο",
 " days old": " ημερών",
+"New Moon Phase": "Νέα Σελήνη",
+"Waxing Crescent Moon": "Αύξων Μηνίσκος",
+"First Quarter Half Moon": "Πρώτο Τέταρτο",
+"Waxing Gibbous Moon": "Αύξων Αμφίκυρτος",
+"Full Moon": "Πανσέληνος",
+"Waning Gibbous Moon": "Φθίνων Αμφίκυρτος",
+"Third Quarter Half Moon": "Τελευταίο Τέταρτο",
+"Waning Crescent Moon": "Φθίνων Μηνίσκος",
 "When the Moon hits your eye . . .": "Φεγγαράκι μου λαμπρό..."
 }

@@ -1520,6 +1520,7 @@ console.log(img.src);
           // static display
         } else if (this.config.mode == "static") {
 
+          if (this.config.showEarthDistance == "yes") {
             // distance from Earth's core
             var DFCOE = document.createElement("div");
                 DFCOE.classList.add("xsmall", "bright", "DFCOE");
@@ -1528,10 +1529,10 @@ console.log(img.src);
             } else {
                 DFCOE.innerHTML = this.translate("Distance from Earth's core = ") + (Math.round(this.info[0].dfcoe) + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,') + " km";
             }
-            if (this.config.showDistance == "yes") {
-                wrapper.appendChild(DFCOE);
-            }
+            wrapper.appendChild(DFCOE);
+          }
 
+          if (this.config.showSunDistance == "yes") {
             // distance from the sun
             var DFS = document.createElement("div");
                 DFS.classList.add("xsmall", "bright", "DFS");
@@ -1541,8 +1542,9 @@ console.log(img.src);
                 DFS.innerHTML = this.translate("Distance from sun = ") + (Math.round(this.info[1].dfs) + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,') + " km";
             }
             wrapper.appendChild(DFS);
+          }
 
-
+          if (this.config.showNextFullMoon == "yes") {
             // Next full moon date
             var nextFullMoon = document.createElement("div");
             if (config.language == "de") {
@@ -1553,7 +1555,6 @@ console.log(img.src);
             nextFullMoon.classList.add("xsmall", "bright", "nextFullMoon");
             //	console.log (Lunartic); // checking data
 
-
             // Because next FM data doesn't occur till after the new moon
             if (this.info[2].fm * 1000 < new Date().valueOf()) {
                 nextFullMoon.innerHTML = this.translate("The last full moon was ") + dateTimeString;
@@ -1562,7 +1563,6 @@ console.log(img.src);
                 nextFullMoon.innerHTML = this.translate("The next full moon is ") + dateTimeString;
                 wrapper.appendChild(nextFullMoon);
             }
-
 
             // Next new moon date
             var nextNewMoon = document.createElement("div");
@@ -1574,22 +1574,25 @@ console.log(img.src);
             nextNewMoon.classList.add("xsmall", "bright", "nextNewMoon");
             nextNewMoon.innerHTML = this.translate("The next new moon is ") + dateTimeString;
             wrapper.appendChild(nextNewMoon);
+          }
 
-
+          if (this.config.showMoonAge == "yes") {
             // how old the current moon is
             var age = document.createElement("div");
             age.classList.add("xsmall", "bright", "age");
             age.innerHTML = this.translate("The current moon is ") + Math.round(this.info[4].age) + this.translate(" days old");
             wrapper.appendChild(age);
+          }
 
-
+          if (this.config.showMoonIllumination == "yes") {
             // how much of the moon is illuminated
             var illumination = document.createElement("div");
             illumination.classList.add("xsmall", "bright", "illumination");
             illumination.innerHTML = this.translate("The moon is ") + Math.round(this.info[5].ill) + this.translate("% illuminated");
             wrapper.appendChild(illumination);
+          }
 
-
+          if (this.config.showMoonPhase == "yes") {
             // waxing, waning, etc..
             var stage = document.createElement("div");
                 stage.classList.add("xsmall", "bright", "stage");
@@ -1654,7 +1657,7 @@ console.log(img.src);
                 stage.innerHTML = this.translate("New Moon - No visible moon");
                 wrapper.appendChild(stage);
             }
-
+          }
         } // end of static mode
 
 
