@@ -20,6 +20,7 @@ Module.register("MMM-Lunartic", {
         retryDelay: 2500,
         updateInterval: 3 * 60 * 1000, // 15 minutes
         rotateInterval: 30 * 1000,
+        showDistance: "yes",
 
     },
 
@@ -42,7 +43,8 @@ Module.register("MMM-Lunartic", {
             sv: "translations/sv.json",
             ro: "translations/ro.json",
             it: "translations/it.json",
-            nl: "translations/nl.json"
+            nl: "translations/nl.json",
+            el: "translations/el.json"
         };
     },
 
@@ -1366,7 +1368,7 @@ console.log(img.src);
                 var info = info[info[this.activeItem]];
 
 
-                if (this.activeItem == 0) {
+                if (this.activeItem == 0 && this.config.showDistance == "yes") {
                     // distance from Earth's core
                     var DFCOE = document.createElement("div");
                     DFCOE.classList.add("xsmall", "bright", "DFCOE");
