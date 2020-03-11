@@ -93,8 +93,8 @@ Module.register("MMM-Lunartic", {
         var pic = document.createElement("div");
         var img = document.createElement("img");
         img.classList.add("photo");
-        img.height = this.maxWidth;
-        img.width = this.maxWidth;
+        img.height = this.imageSize;
+        img.width = this.maxSize;
 
 
 ///////////////////////// Temporary till API is fixed ///////////////////// Start
