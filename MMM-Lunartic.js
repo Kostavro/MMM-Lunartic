@@ -1563,7 +1563,8 @@ console.log(img.src);
                 nextFullMoon.innerHTML = this.translate("The next full moon is ") + dateTimeString;
                 wrapper.appendChild(nextFullMoon);
             }
-
+          }
+          if (this.config.showNextMoon == "yes") {
             // Next new moon date
             var nextNewMoon = document.createElement("div");
             if (config.language == "de") {
