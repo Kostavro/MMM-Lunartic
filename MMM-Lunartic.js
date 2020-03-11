@@ -13,6 +13,7 @@ Module.register("MMM-Lunartic", {
         useHeader: false, // true if you want a header
         header: "The Lunartic is in my head", // Any text you want. useHeader must be true
         maxWidth: "300px",
+        imageSize: "50px",
         distance: "miles", // miles or km
         sounds: "no", // for wolf howls, only on a full moon
         animationSpeed: 0,
@@ -91,7 +92,9 @@ Module.register("MMM-Lunartic", {
         // moon animation
         var pic = document.createElement("div");
         var img = document.createElement("img");
-            img.classList.add("photo");
+        img.classList.add("photo");
+        img.height = this.maxWidth;
+        img.width = this.maxWidth;
 
 
 ///////////////////////// Temporary till API is fixed ///////////////////// Start
