@@ -1564,7 +1564,7 @@ console.log(img.src);
                 wrapper.appendChild(nextFullMoon);
             }
           }
-          if (this.config.showNextMoon == "yes") {
+          if (this.config.showNextNewMoon == "yes") {
             // Next new moon date
             var nextNewMoon = document.createElement("div");
             if (config.language == "de") {
