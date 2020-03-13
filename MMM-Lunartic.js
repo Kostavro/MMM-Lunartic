@@ -13,7 +13,8 @@ Module.register("MMM-Lunartic", {
         useHeader: false, // true if you want a header
         header: "The Lunartic is in my head", // Any text you want. useHeader must be true
         maxWidth: "300px",
-        imageSize: "50px",
+        imageSize: "150px",
+	showImage: "yes",
         distance: "miles", // miles or km
         sounds: "no", // for wolf howls, only on a full moon
         animationSpeed: 0,
@@ -88,13 +89,14 @@ Module.register("MMM-Lunartic", {
         var distance = this.config.distance; // miles or km
         var image = this.config.image; // animation, current, DayNight or static
 
+        if (this.config.showImage == "yes") {
         // The image choices
         // moon animation
         var pic = document.createElement("div");
         var img = document.createElement("img");
         img.classList.add("photo");
-        img.height = this.imageSize;
-        img.width = this.maxSize;
+	img.style.height = this.config.imageSize;
+    	img.style.width = this.config.imageSize;
 
 
 ///////////////////////// Temporary till API is fixed ///////////////////// Start
@@ -1330,7 +1332,7 @@ if (Math.round(this.info[5].ill) < 1 && this.info[6] == "waning") {
  }
 
 console.log(img.src);
-
+}
 
   ///////////////////////// Temporary till API is fixed ///////////////////// END
 

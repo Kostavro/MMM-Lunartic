@@ -14,7 +14,7 @@
   margin-left: 0px;          /* Precisely align moon picture with these */
   margin-right: 0px;
   margin-top: 0px;         /* -41px for current. -21px for animation or static. */
-  margin-bottom: -60px;      /* -51px for current. -21px for animation or static. */
+  /*margin-bottom: -60px;      /* -51px for current. -21px for animation or static. */
 }
 
 .MMM-Lunartic .age {
